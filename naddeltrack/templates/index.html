@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NaddelTrack | Global Shipment Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f9ff;
+            color: #333;
+        }
+        header {
+            background-color: #0052cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #007bff, #0052cc);
+            color: white;
+        }
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .track-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .track-form input {
+            padding: 12px;
+            width: 80%;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+        .track-form button {
+            padding: 12px;
+            background: #fff;
+            color: #0052cc;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .features {
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .feature {
+            width: 280px;
+            margin-bottom: 30px;
+        }
+        footer {
+            background: #0052cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .track-form input, .track-form button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NaddelTrack</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Track Your Shipment Worldwide</h2>
+        <p>Fast, Secure and Real-Time Global Delivery Updates</p>
+        <form class="track-form" action="/track" method="post">
+            <input type="text" name="tracking_number" placeholder="Enter Tracking Number" required>
+            <button type="submit">Track</button>
+        </form>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Global Reach</h3>
+            <p>Track packages across countries, cities and continents.</p>
+        </div>
+        <div class="feature">
+            <h3>Live Updates</h3>
+            <p>Get real-time tracking updates every step of the way.</p>
+        </div>
+        <div class="feature">
+            <h3>Secure</h3>
+            <p>Your data is encrypted and handled with the highest security.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 NaddelTrack. All rights reserved.
+    </footer>
+</body>
+</html>
