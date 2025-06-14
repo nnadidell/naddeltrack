@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Dashboard</title></head>
+<body>
+  <h2>Admin Panel</h2>
+  <form method="POST">
+    <input name="id" placeholder="Tracking ID" required /><br>
+    <input name="location" placeholder="Location" required /><br>
+    <input name="status" placeholder="Status" required /><br>
+    <input name="eta" placeholder="ETA" required /><br>
+    <button type="submit">Save Entry</button>
+  </form>
+
+  <h3>Current Shipments</h3>
+  <ul>
+    {% for item in data %}
+      <li><strong>{{ item.id }}</strong> - {{ item.location }} ({{ item.status }}) - ETA: {{ item.eta }}</li>
+    {% endfor %}
+  </ul>
+  <br>
+  <a href="/logout">Logout</a>
+</body>
+</html>

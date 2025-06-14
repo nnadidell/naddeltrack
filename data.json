@@ -1,0 +1,14 @@
+[
+  {
+    "id": "NADDEL-001",
+    "location": "Lagos Distribution Center",
+    "status": "In Transit",
+    "eta": "2 Days"
+  },
+  {
+    "id": "NADDEL-002",
+    "location": "Ikeja Sorting Hub",
+    "status": "Out for Delivery",
+    "eta": "Today"
+  }
+]
