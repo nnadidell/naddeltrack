@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NaddelTrack - Track Your Shipment</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; background-color: #e6f0ff; padding-top: 100px; }
+    form, .result { margin: auto; width: 90%; max-width: 500px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px #aaa; }
+    input { width: 100%; padding: 10px; margin: 10px 0; }
+    .history { text-align: left; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1 style="color:#0070c9;">NaddelTrack</h1>
+  <form method="POST">
+    <input name="tracking_id" placeholder="Enter Tracking Number (e.g. NAD123456)">
+    <button type="submit">Track</button>
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+  </form>
+
+  {% if data %}
+    <div class="result">
+      <h3>Status: {{ data.status }}</h3>
+      <p>Current Location: {{ data.current_location }}</p>
+      <p>Last Update: {{ data.last_update }}</p>
+      <p>Estimated Delivery: {{ data.estimated_delivery }}</p>
+      <div class="history">
+        <h4>History:</h4>
+        <ul>
+          {% for event in data.history %}
+            <li>{{ event }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+</body>
+</html>

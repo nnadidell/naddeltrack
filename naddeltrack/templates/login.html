@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <style>
+    body { font-family: sans-serif; background-color: #eef; text-align: center; padding-top: 100px; }
+    form { display: inline-block; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 5px #ccc; }
+    input { display: block; margin: 10px auto; padding: 10px; width: 200px; }
+  </style>
+</head>
+<body>
+  <h2>Admin Login</h2>
+  <form method="post">
+    <input name="username" placeholder="Username" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+  </form>
+</body>
+</html>
